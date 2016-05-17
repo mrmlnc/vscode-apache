@@ -1,0 +1,37 @@
+{
+    "name": "vscode-apache",
+    "displayName": "Apache Conf",
+    "description": "Syntax highlighter for Apache configuration files",
+    "version": "1.0.0",
+    "publisher": "mrmlnc",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "icon": "icon.png",
+    "homepage": "https://github.com/mrmlnc/vscode-apache",
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "apacheconf",
+            "aliases": ["Apache"],
+            "extensions": [
+                "conf",
+                ".conf",
+                "htaccess",
+                ".htaccess",
+                "htgroups",
+                ".htgroups",
+                "htpasswd",
+                ".htpasswd"
+            ],
+            "configuration": "./apache.configuration.json"
+        }],
+        "grammars": [{
+            "language": "apacheconf",
+            "scopeName": "source.apacheconf",
+            "path": "./syntaxes/Apache.tmLanguage"
+        }]
+    }
+}
