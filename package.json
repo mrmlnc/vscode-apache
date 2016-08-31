@@ -4,20 +4,30 @@
   "description": "Syntax highlighter for Apache configuration files",
   "version": "1.0.1",
   "publisher": "mrmlnc",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.0.0"
   },
   "icon": "icon.png",
-  "homepage": "https://github.com/mrmlnc/vscode-apache",
+  "homepage": "https://github.com/mrmlnc/vscode-apache/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmlnc/vscode-apache"
+  },
+  "keywords": [
+    "apache",
+    "http",
+    "https",
+    "syntax",
+    "highlight"
+  ],
   "categories": [
     "Languages"
   ],
   "contributes": {
     "languages": [{
       "id": "apacheconf",
-      "aliases": [
-        "Apache"
-      ],
+      "aliases": ["Apache", "apache"],
       "extensions": [
         "conf",
         ".conf",
