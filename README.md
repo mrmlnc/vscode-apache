@@ -2,6 +2,14 @@
 
 > Syntax highlighing for Apache conf files in Visual Studio Code. Ported from [ApacheConf.tmLanguage](https://github.com/colinta/ApacheConf.tmLanguage).
 
+## Donate
+
+If you want to thank me, or promote your Issue.
+
+[![Gratipay User](https://img.shields.io/gratipay/user/mrmlnc.svg?style=flat-square)](https://gratipay.com/~mrmlnc)
+
+> Sorry, but I have work and support for plugins requires some time after work. I will be glad of your support.
+
 ## Colorization
 
 ![colorization](https://cloud.githubusercontent.com/assets/7034281/15320929/ea8feb28-1c3b-11e6-9c70-f3a5cb353c73.png)
