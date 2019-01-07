@@ -5,12 +5,23 @@
     <key>fileTypes</key>
     <array>
         <string>conf</string>
+        <string>CONF</string>
+        <string>envvars</string>
         <string>htaccess</string>
+        <string>HTACCESS</string>
         <string>htgroups</string>
+        <string>HTGROUPS</string>
         <string>htpasswd</string>
+        <string>HTPASSWD</string>
+        <string>.htaccess</string>
+        <string>.HTACCESS</string>
+        <string>.htgroups</string>
+        <string>.HTGROUPS</string>
+        <string>.htpasswd</string>
+        <string>.HTPASSWD</string>
     </array>
     <key>name</key>
-    <string>Apache</string>
+    <string>Apache Conf</string>
     <key>patterns</key>
     <array>
         <dict>
@@ -183,7 +194,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>^[\t\s]*\b(AcceptPathInfo|AccessFileName|AddDefaultCharset|AddOutputFilterByType|AllowEncodedSlashes|AllowOverride|AuthName|AuthType|CGIMapExtension|ContentDigest|DefaultType|Define|DocumentRoot|EnableMMAP|EnableSendfile|ErrorDocument|ErrorLog|FileETag|ForceType|HostnameLookups|IdentityCheck|Include(Optional)?|KeepAlive|KeepAliveTimeout|LimitInternalRecursion|LimitRequestBody|LimitRequestFields|LimitRequestFieldSize|LimitRequestLine|LimitXMLRequestBody|LogLevel|MaxKeepAliveRequests|Mutex|NameVirtualHost|Options|Require|RLimitCPU|RLimitMEM|RLimitNPROC|Satisfy|ScriptInterpreterSource|ServerAdmin|ServerAlias|ServerName|ServerPath|ServerRoot|ServerSignature|ServerTokens|SetHandler|SetInputFilter|SetOutputFilter|Time(O|o)ut|TraceEnable|UseCanonicalName|Use|ErrorLogFormat|GlobalLog|PHPIniDir|SSLHonorCipherOrder|SSLCompression|SSLUseStapling|SSLStapling\w+|SSLCARevocationCheck|SSLSRPVerifierFile|SSLSessionTickets|RequestReadTimeout|ProxyHTML\w+|MaxRanges)\b</string>
+            <string>\b(AcceptPathInfo|AccessFileName|AddDefaultCharset|AddOutputFilterByType|AllowEncodedSlashes|AllowOverride|AuthName|AuthType|CGIMapExtension|ContentDigest|DefaultType|Define|DocumentRoot|EnableMMAP|EnableSendfile|ErrorDocument|ErrorLog|FileETag|ForceType|HostnameLookups|IdentityCheck|Include(Optional)?|KeepAlive|KeepAliveTimeout|LimitInternalRecursion|LimitRequestBody|LimitRequestFields|LimitRequestFieldSize|LimitRequestLine|LimitXMLRequestBody|LogLevel|MaxKeepAliveRequests|Mutex|NameVirtualHost|Options|Require|RLimitCPU|RLimitMEM|RLimitNPROC|Satisfy|ScriptInterpreterSource|ServerAdmin|ServerAlias|ServerName|ServerPath|ServerRoot|ServerSignature|ServerTokens|SetHandler|SetInputFilter|SetOutputFilter|Time(O|o)ut|TraceEnable|UseCanonicalName|Use|ErrorLogFormat|GlobalLog|PHPIniDir|SSLHonorCipherOrder|SSLCompression|SSLUseStapling|SSLStapling\w+|SSLCARevocationCheck|SSLSRPVerifierFile|SSLSessionTickets|RequestReadTimeout|ProxyHTML\w+|MaxRanges)\b</string>
         </dict>
         <dict>
             <key>captures</key>
@@ -304,6 +315,18 @@
             </dict>
             <key>match</key>
             <string>\b(AddAlt|AddAltByEncoding|AddAltByType|AddDescription|AddIcon|AddIconByEncoding|AddIconByType|DefaultIcon|HeaderName|IndexIgnore|IndexOptions|IndexOrderDefault|ReadmeName)\b</string>
+        </dict>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.filter.apacheconf</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\b(BalancerMember|BalancerGrowth|BalancerPersist|BalancerInherit)\b</string>
         </dict>
         <dict>
             <key>captures</key>
@@ -472,6 +495,18 @@
             </dict>
             <key>match</key>
             <string>\b(CacheFile|MMapFile)\b</string>
+        </dict>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.filter.apacheconf</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\b(AddOutputFilterByType|FilterChain|FilterDeclare|FilterProtocol|FilterProvider|FilterTrace)\b</string>
         </dict>
         <dict>
             <key>captures</key>
@@ -663,7 +698,19 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>\b(SSLCACertificateFile|SSLCACertificatePath|SSLCARevocationFile|SSLCARevocationPath|SSLCertificateChainFile|SSLCertificateFile|SSLCertificateKeyFile|SSLCipherSuite|SSLEngine|SSLMutex|SSLOptions|SSLPassPhraseDialog|SSLProtocol|SSLProxyCACertificateFile|SSLProxyCACertificatePath|SSLProxyCARevocationFile|SSLProxyCARevocationPath|SSLProxyCipherSuite|SSLProxyEngine|SSLProxyMachineCertificateFile|SSLProxyMachineCertificatePath|SSLProxyProtocol|SSLProxyVerify|SSLProxyVerifyDepth|SSLRandomSeed|SSLRequire|SSLRequireSSL|SSLSessionCache|SSLSessionCacheTimeout|SSLUserName|SSLVerifyClient|SSLVerifyDepth|SSLInsecureRenegotiation|SSLOpenSSLConfCmd)\b</string>
+            <string>\b(SSLCACertificateFile|SSLCACertificatePath|SSLCARevocationFile|SSLCARevocationPath|SSLCertificateChainFile|SSLCertificateFile|SSLCertificateKeyFile|SSLCipherSuite|SSLEngine|SSLMutex|SSLOptions|SSLPassPhraseDialog|SSLProtocol|SSLProxyCACertificateFile|SSLProxyCACertificatePath|SSLProxyCARevocationFile|SSLProxyCARevocationPath|SSLProxyCipherSuite|SSLProxyEngine|SSLProxyMachineCertificateFile|SSLProxyMachineCertificatePath|SSLProxyProtocol|SSLProxyVerify|SSLProxyVerifyDepth|SSLRandomSeed|SSLRequire|SSLRequireSSL|SSLSessionCache|SSLSessionCacheTimeout|SSLUserName|SSLVerifyClient|SSLVerifyDepth)\b</string>
+        </dict>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.substitute.apacheconf</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\b(Substitute|SubstituteInheritBefore|SubstituteMaxLineLength)\b</string>
         </dict>
         <dict>
             <key>captures</key>
