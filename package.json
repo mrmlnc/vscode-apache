@@ -2,7 +2,7 @@
   "name": "vscode-apache",
   "displayName": "Apache Conf",
   "description": "Syntax highlighter for Apache configuration files",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "publisher": "mrmlnc",
   "license": "MIT",
   "engines": {
@@ -22,7 +22,7 @@
     "highlight"
   ],
   "categories": [
-    "Languages"
+    "Programming Languages"
   ],
   "contributes": {
     "languages": [{
